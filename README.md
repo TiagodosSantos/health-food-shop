@@ -4,15 +4,19 @@ An application used to handle products data, built with React, Redux, Thunk, Jav
 ## Installation and Setup Instructions
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
-### Installation:
+#### Installation:
 
 `npm install`  
 
-### To Run Test Suite:  
+#### To Run Test Suite:  
 `npm run test`  
 
-### To Start Server:
+#### To Start Server:
 `npm run prod`  
 
-### To Visit App:
+#### To Visit App:
 `localhost:3000/`
+
+##### Authentication
+username: admin@admin.com
+password: 123456
