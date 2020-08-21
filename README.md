@@ -1,23 +1,18 @@
-## Project Name & Pitch
-
-#### Example:
-
-Health Food Shop 
-
+## Health Food Shop 
 An application used to handle products data, built with React, Redux, Thunk, JavaScript, MaterialUI  and CSS.
 
 ## Installation and Setup Instructions
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
-Installation:
+### Installation:
 
 `npm install`  
 
-To Run Test Suite:  
+### To Run Test Suite:  
 `npm run test`  
 
-To Start Server:
+### To Start Server:
 `npm run prod`  
 
-To Visit App:
+### To Visit App:
 `localhost:3000/`
