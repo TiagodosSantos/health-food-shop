@@ -81,7 +81,6 @@ const ProductList = ({
             dialogTitle: 'Excluir',
             message: `Tem certeza que deseja excluir o registro '${dado.title}' permanentemente? `,
             action(){
-                console.log('Entrou');
                 setState({...state, mensagem: { openToast: false }});
                 onSetMessagePressed({
                     open: false,

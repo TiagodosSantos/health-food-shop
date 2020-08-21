@@ -20,7 +20,6 @@ class Login extends React.Component {
             query: queryString.parse(this.props.location.search)
           };
 
-          console.log(this.state.query.redirect);
         //this.registrarUsuario = this.registrarUsuario.bind(this);
     }
 

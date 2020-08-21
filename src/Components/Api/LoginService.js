@@ -5,8 +5,6 @@ const LoginService = {
 
     SendForm: data => {
 
-        console.log(data);
-
         return fetch(`${urlBase}`, {
             method: 'POST',
             headers: {'content-type': 'application/json'},
@@ -18,7 +16,6 @@ const LoginService = {
 
     HandleError: res=>{
         
-        console.log(res);
         if(!res.ok)
             throw Error(res.responseText);
 
