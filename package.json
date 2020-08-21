@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "npx webpack-dev-server --mode development --open",
     "build": "npx webpack --mode development",
+    "prod": "npx webpack-dev-server --mode production",
+    "build_prod": "npx webpack --mode production",
     "test": "mocha \"src/**/*.test.js\" --require @babel/register --recursive"
   },
   "keywords": [],
