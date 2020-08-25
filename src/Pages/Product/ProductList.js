@@ -44,7 +44,6 @@ const ProductList = ({
         products = [], 
         onRemovePressed, 
         onUpdatePressed,
-        onCompletedPressed, 
         isLoading, 
         message, 
         startLoadingProducts,
@@ -186,9 +185,6 @@ const ProductList = ({
                 products.map(product => <ProductListItem 
                     key={product.id}
                     product={product} 
-                    onRemovePressed={onRemovePressed}
-                    onCompletedPressed={onCompletedPressed}
-                    onSetMessagePressed={onSetMessagePressed}
                     handleUpdate={handleUpdate}
                     handleRemove={handleRemove}/>)
                 }

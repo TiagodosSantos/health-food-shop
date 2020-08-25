@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
       },
   }));
 
-const ProductListItem = ({ product, onRemovePressed, onCompletedPressed, handleRemove, handleUpdate }) => {
+const ProductListItem = ({ product, handleRemove, handleUpdate }) => {
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const matches = useMediaQuery('(max-width:480px)');
