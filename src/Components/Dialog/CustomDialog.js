@@ -1,6 +1,6 @@
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
+import React, { useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -40,10 +40,22 @@ const CustomDialog = (props) => {
         // value: null,
     });
 
+    const [disableButton, setDisableButton] = React.useState(false);
+
     const handleChange = (event) => {
         const { name, value } = event.target;
         setState({ ...state, [name]: value });
     };
+
+    useEffect(() => {
+        let disable = false;
+        campos.forEach(campo => {
+            if(!campo.opcional && (campo.dado in state) && !state[campo.dado] && !disable){
+                disable = true;
+            }
+        });
+        setDisableButton(disable);
+    }, [state]);
 
     const onCloseDialog = () => {
         setState({
@@ -100,6 +112,7 @@ const CustomDialog = (props) => {
                                 action(dataToUpdate);
                                 onCloseDialog();
                             }}
+                            disabled={disableButton}
                         >
                             {labelButton || 'None'}
                         </Button>

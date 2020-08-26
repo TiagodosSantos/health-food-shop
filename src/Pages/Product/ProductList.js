@@ -94,6 +94,8 @@ const ProductList = ({
         setState({...state, mensagem});
     };
 
+    const notOptional = ['title', 'type', 'price'];
+
     const handleUpdate = (dado) => {
 
         const camposObject = 
@@ -101,7 +103,8 @@ const ProductList = ({
                     return (
                              {
                                 'titulo':`${fields[key]}`,
-                                'dado':`${key}`
+                                'dado':`${key}`,
+                                'opcional': !notOptional.includes(key)
                              }
                     )});
 
