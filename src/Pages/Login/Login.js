@@ -39,7 +39,7 @@ class Login extends React.Component {
                 this.props.history.push("/");
         })
         .catch(erro => {
-            this.setState({msg: 'Não foi possível fazer o login ' + erro.status});
+            this.setState({msg: 'Não foi possível fazer o login. Usuário ou senha inválidos!'});
         });
         
         
@@ -57,9 +57,9 @@ class Login extends React.Component {
 
     render() {
         return (
-                <div className="login-box">
+                <div className="login-box" style={{textAlign:"center"}}>
                     <h1 className="header-logo">Smartest Store</h1>
-                    <span>{this.state.msg}</span>
+                    <span style={{color: 'red', fontSize:'10px'}}>{this.state.msg}</span>
                         <form onSubmit={this.sendForm.bind(this)} method="post">
                             <Grid container spacing={8} alignItems="flex-end">
                                 <Grid item>

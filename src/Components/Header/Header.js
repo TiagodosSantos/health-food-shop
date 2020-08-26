@@ -2,6 +2,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import styled from 'styled-components';
 import LinkWrapper from '../../Utils/LinkWrapper';
+import Logout from '../../Pages/Logout/Logout';
 
 const HeaderContent = styled.header`
     margin: 0px;
@@ -23,14 +24,23 @@ const Header = () => {
       return user ? `${user}` : <LinkWrapper to="/login">Logar</LinkWrapper>;
     } 
 
+    const Logout = () => {
+      return user ? <LinkWrapper to="/logout">Logout</LinkWrapper> : null;
+    } 
+
     return (
         <HeaderContent>
-          <Grid container spacing={3}>
+          <Grid container justify="center" alignItems="center" spacing={3}>
             <Grid item xs={10}>
               Smartest IT Solutions ME 
             </Grid>
             <Grid item xs={2}>
-              <User />
+              <Grid item xs>
+                <User />
+              </Grid>
+              <Grid item xs>
+                <Logout />
+              </Grid>
             </Grid>
           </Grid>
         </HeaderContent>
