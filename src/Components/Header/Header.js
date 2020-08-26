@@ -2,7 +2,6 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import styled from 'styled-components';
 import LinkWrapper from '../../Utils/LinkWrapper';
-import Logout from '../../Pages/Logout/Logout';
 
 const HeaderContent = styled.header`
     margin: 0px;
@@ -29,7 +28,7 @@ const Header = () => {
     } 
 
     return (
-        <HeaderContent>
+        <HeaderContent className="fixed-header">
           <Grid container justify="center" alignItems="center" spacing={3}>
             <Grid item xs={10}>
               Smartest IT Solutions ME 
